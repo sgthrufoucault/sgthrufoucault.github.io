@@ -1,0 +1,474 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+    <title>TASSEL Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FRS Final Project">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″ />
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="icon" href='https://static.wixstatic.com/media/dc5aad_3ff951301b3543479d847e185f5e5abd~mv2.png/v1/fill/w_73,h_61,al_c,q_85,usm_0.66_1.00_0.01/TASSEL%20LOGO-final%20draft.webp'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='storiesStyle.css'>
+    <script src='stories.js'></script>
+    <base target="_top">
+</head>
+<body>
+    <div id='first' style='background-color: rgba(0, 0, 0, 0.6)'>
+        <h3>
+            Click to discover
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-index-thumb" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6.75 1a.75.75 0 0 0-.75.75V9.5a.5.5 0 0 1-.854.354l-2.41-2.411a.517.517 0 0 0-.809.631l2.512 4.185 1.232 2.465a.5.5 0 0 0 .447.276h6.302a.5.5 0 0 0 .434-.252l1.395-2.442a2.5 2.5 0 0 0 .317-.991l.272-2.715a1 1 0 0 0-.995-1.1H13.5v1a.5.5 0 1 1-1 0V7.154a4.208 4.208 0 0 0-.2-.26c-.187-.222-.368-.383-.486-.43-.124-.05-.392-.063-.708-.039a4.844 4.844 0 0 0-.106.01V8a.5.5 0 1 1-1 0V5.986c0-.167-.073-.272-.15-.314a1.657 1.657 0 0 0-.448-.182c-.179-.035-.5-.04-.816-.027l-.086.004V8a.5.5 0 1 1-1 0V1.75A.75.75 0 0 0 6.75 1zM8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.272-2.715a2 2 0 0 0-1.99-2.199h-.582a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.634 2.634 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046l-.048.002zm2.094 2.025z"/>
+            </svg>
+        </h3>
+    </div>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <div id='sidebar'>
+        <h1>FRS139</h1>
+
+        <ul>
+            <li><a onclick="document.getElementById('timeline-intro').scrollIntoView();"><div id='1' class='nav active'></div></a></li>
+            <li><a onclick="document.getElementById('information').scrollIntoView();"><div id='2' class='nav'></div></a></li>
+            <li><a onclick="document.getElementById('gallery-intro').scrollIntoView();"><div id='3' class='nav'></div></a></li>
+            <li><a onclick="document.getElementById('gallery-container').scrollIntoView();"><div id='4' class='nav'></div></a></li>
+            <li><a onclick="document.getElementById('teachers').scrollIntoView();"><div id='5' class='nav'></div></a></li>
+            <li><a onclick="document.getElementById('donate').scrollIntoView();"><div id='6' class='nav'></div></a></li>
+        </ul>
+    </div>
+    <div class='section bg' id='intro'>
+        <div id='titletext'>
+            <h1 class='texth1'>FRS 139 Final Project</h1>
+            <h4 class='texth4'>Understanding Singapore Through Foucault</h4>
+        </div>
+        <div class='arrowButtonContainer'>
+            <a onclick='start()'>
+                <button id='titleButton' type="button" class="btn btn-lg btn-outline-info mt-1 texth4">Click to Start</button>
+            </a>
+        </div>
+    </div>
+    <div class='phaseOne section' id='timeline-intro' style='overflow: hidden;'>
+        <div id='introContainer'>
+            <div id='introText' class='fade-in'>
+                <h3 class='texth3'>
+                    In just over five decades, Singapore has become one of the prosperous nations in the world. Many regard it as the modern digital utopia, but the tiny city-state is also known for its arguably authoritative government regime and stringent laws that restrict the freedom of its citizens.
+                </h3>
+                <h5 class='texth5'>
+                    This report attempts to answer the question: to what extent is Singapore’s model of governance compatible with Foucault’s ideas on discipline?
+                </h5>
+            </div>
+            <img src='assets/flag.png'>
+        </div>
+    </div>
+    <div class='phaseOne' style='display: none; height:100px;  background-image: linear-gradient(#0D1321,#1D2D44);'></div>
+    <div class='phaseOne section' id='information' style='position: relative;'>
+        <h1 class='fade-in texth2' id='timelinetitle'>SINGAPORE HISTORY TIMELINE</h1>
+        <h3 class='fade-in texth6'>Click on the illustrations for more information.</h3>
+        <div id='timeline'>
+            <div id='vertical'></div>
+            <div class="container above" id='firstpanel' data-toggle="modal" data-target="#modal16">
+                <div class="content">
+                    <img src='assets/timeline-1.png'>
+                    <h1 class='header texth3'>
+                        AUGUST 1965
+                    </h1>
+                </div>
+            </div>
+            <div class="container under" id="secondpanel" data-toggle="modal" data-target="#modal17">
+                <div class="content">
+                    <img src='assets/timeline-2.png'>
+                    <h1 class='header'>
+                        APRIL 1968
+                    </h1>
+                </div>
+            </div>
+            <div class="container above" id="thirdpanel" data-toggle="modal" data-target="#modal18">
+                <div class="content">
+                    <img src='assets/timeline-3.png'>
+                    <h1 class='header'>
+                        DECEMBER 1984
+                    </h1>
+                </div>
+            </div>
+            <div class="container under" id="fourthpanel" data-toggle="modal" data-target="#modal19">
+                <div class="content">
+                    <img src='assets/timeline-4.png'>
+                    <h1 class='header'>
+                        APRIL 2001
+                    </h1>
+                </div>
+            </div>
+            <div class="container above" id="fifthpanel" data-toggle="modal" data-target="#modal20">
+                <div class="content">
+                    <img src='assets/timeline-5.png'>
+                    <h1 class='header'>
+                        AUGUST 2004
+                    </h1>
+                </div>
+            </div>
+            <div class="container under" id="sixthpanel" data-toggle="modal" data-target="#modal21">
+                <div class="content">
+                    <img src='assets/timeline-6.png'>
+                    <h1 class='header'>
+                        AUGUST 2016
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='phaseOne' style='display: none; height:100px;  background-image: linear-gradient(#1D2D44, #3E5C76);'></div>
+    <div class='phaseOne section' id='gallery-intro' style='position: relative;'>
+        <div style='width: 100%;' id='gallery-intro-fade' class='fade-in'>
+            <h2 class='texth2'>
+                How exactly does Singapore "discipline" its citizens?
+            </h2>
+            <h4 class='texth4'>
+                Click on each photo below to find out more. 
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-hand-index-thumb" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6.75 1a.75.75 0 0 0-.75.75V9.5a.5.5 0 0 1-.854.354l-2.41-2.411a.517.517 0 0 0-.809.631l2.512 4.185 1.232 2.465a.5.5 0 0 0 .447.276h6.302a.5.5 0 0 0 .434-.252l1.395-2.442a2.5 2.5 0 0 0 .317-.991l.272-2.715a1 1 0 0 0-.995-1.1H13.5v1a.5.5 0 1 1-1 0V7.154a4.208 4.208 0 0 0-.2-.26c-.187-.222-.368-.383-.486-.43-.124-.05-.392-.063-.708-.039a4.844 4.844 0 0 0-.106.01V8a.5.5 0 1 1-1 0V5.986c0-.167-.073-.272-.15-.314a1.657 1.657 0 0 0-.448-.182c-.179-.035-.5-.04-.816-.027l-.086.004V8a.5.5 0 1 1-1 0V1.75A.75.75 0 0 0 6.75 1zM8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.272-2.715a2 2 0 0 0-1.99-2.199h-.582a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.634 2.634 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046l-.048.002zm2.094 2.025z"/>
+                </svg>
+            </h4>
+        </div>
+        <img class='fade-in' src='assets/robot-transparent.png'>
+        <div class='arrowButtonContainer'>
+            <a onclick="document.getElementById('gallery-container').scrollIntoView();">
+                <svg class='arrowButton' width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-chevron-compact-down" fill="#F0EBD8" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class='phaseOne' style='display: none; height:100px;  background-image: linear-gradient(#3E5C76,#597491);'></div>
+    <div class='phaseOne section' id='gallery-container'>
+        <div class="row" id='gallery'>
+            <div class="column fade-in-gallery">
+                <div class='element' data-toggle="modal" data-target="#modal1">
+                    <img class='image' src="assets/press.jpeg" onload='increment()'>
+                    <div class="middle">
+                        <div class="text">
+                            <p style='font-size: 24px;'>Suppression of Freedom of Speech and Press</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='element' data-toggle="modal" data-target="#modal2">
+                    <img class='image' src="assets/tracetogether.jpeg" onload='increment()'>
+                    <div class="middle">
+                        <div class="text">
+                            <p style='font-size: 24px;'>Response to COVID-19</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='element' data-toggle="modal" data-target="#modal3">
+                    <img class='image' src="assets/camera.jpeg" onload='increment()'>
+                    <div class="middle">
+                        <div class="text">
+                            <p style='font-size: 24px;'>Surveillance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column fade-in-gallery">
+                <div class='element' data-toggle="modal" data-target="#modal4">
+                    <img class='image' src="assets/speaker.jpeg" onload='increment()'>
+                    <div class="middle">
+                        <div class="text">
+                            <p style='font-size: 24px;'>Suppression of Freedom of Assembly</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='element' data-toggle="modal" data-target="#modal5">
+                    <img class='image' src="assets/cane.jpeg" onload='increment()'>
+                    <div class="middle">
+                        <div class="text">
+                            <p style='font-size: 24px;'>Corporal Punishment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='phaseOne' style='display: none; height:100px;  background-image: linear-gradient(#597491,#748CAB);'></div>
+    <div class='phaseOne section' id='teachers' style='position: relative;'>
+        <div class='fade-in' id='teachers-fade' style='z-index: 0;'>
+            <img class='fade-in' src='assets/qrcode.png'>
+            <div id="conclusionText">
+                <div class='slideText'>
+                    <h2 class='texth2'>Country-Sized Panopticon?</h2>
+                </div>
+                <div class='fade-in slideText' style='margin-top: 20px;'>
+                    <h5 class='texth5'>
+                        While certain aspects of Singapore’s policies, such as their stance of corporal punishment, differ from Foucault’s ideas, the coutry nevertheless models some of the key characteristics of the disciplined society envisioned by the French philosopher. It has fully embraced the power of technology to exert control over its citizens in a panopticon-like manner, which may explain why Singapore is known for being such an efficient, well-run country.
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='phaseOne' style='display: none; height:100px;  background-image: linear-gradient(#748CAB,#F0E8BD);'></div>
+    <div class='phaseOne section' id='donate'>
+        <div class='fade-in' id='donateContent'>
+            <h2 class='texth2'>Bibliography</h2>
+            <p>
+                Chen, Siyuan. “Singapore City Night Skyline from Marina Bay Sands.” Wikimedia Commons, 2010, https://commons.wikimedia.org/wiki/File:1_Singapore_skyline.jpg. Accessed 2021. 
+                Civicus. “SINGAPORE PUBLIC ORDER ACT USED TO RESTRICT OR CRIMINALISE EXPRESSION AND PEACEFUL ASSEMBLY.” Civicus, 26 July 2018, https://monitor.civicus.org/updates/2018/07/26/singapore-public-order-act-used-restrict-or-criminalise-expression-and-peaceful-assembly/. 
+                Guest, Peter. “Singapore's Tech-Utopia Dream Is Turning into a Surveillance State Nightmare.” Rest of World, 16 Nov. 2021, https://restofworld.org/2021/singapores-tech-utopia-dream-is-turning-into-a-surveillance-state-nightmare/. 
+                Human Rights Watch. “'Kill the Chicken to Scare the Monkeys': Suppression of Free Expression and Assembly in Singapore.” Human Rights Watch, 12 Dec. 2017, https://www.hrw.org/report/2017/12/12/kill-chicken-scare-monkeys/suppression-free-expression-and-assembly-singapore#. 
+                Isderion. “Surveillance Cameras in Singapore.” Wikimedia Commons, 15 June 2010, https://commons.wikimedia.org/wiki/File:%C3%9Cberwachungskameras_Singapur.jpg. Accessed 7 Dec. 2021. 
+                Poon, PM. “Canes.” Wikimedia Commons, 5 Sept. 2005, https://commons.wikimedia.org/wiki/File:Canes.jpg. Accessed 7 Dec. 2021. 
+                Santika, Raynald. “Speaker's Corner.” Wikimedia Commons, 23 Mar. 2017, https://commons.wikimedia.org/wiki/File:Speakers_Corner_1.jpg. Accessed 7 Dec. 2021. 
+                “Straits Times.” The Straits Times, 25 Mar. 2019, https://www.straitstimes.com/business/banking/chinese-backed-fintech-gets-licence-to-offer-online-advisory-service-to-singapore. Accessed 7 Dec. 2021. 
+                Tay, Wei Leng. “Trace Together Contact-Tracing Phone App.” Bloomberg, 2021, https://www.bloomberg.com/news/articles/2021-01-09/singapore-to-legislate-on-contact-trace-data-use-in-crime-probes. 
+            </p>
+        </div>
+    </div>
+</body>
+    <div class="modal fade storymodal" id="modal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #3E5C76;'>
+                <div class="modal-header">
+                    <h5 class="modal-title">Suppression of Freedom of Speech and Press</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class='modalimage' src='assets/press.jpeg' onload='increment()'>
+                    <p>
+                        Singapore’s PAP has implemented measures to control and monitor speech and press. The aforementioned Contempt of Court Bill restricts what people can say about the court. Numerous journalists and authors have thus been imprisoned for speaking critically of the court. Another recently introduced bill, such as the “​​Protection from Online Falsehoods and Manipulation Act” allows the government to remove online content that it deems false, which has alerted freedom of speech advocates.
+                        <br>
+                        The most popular newspaper in Singapore is the Straits Times, which is published by Singapore Press Holdings. SPH is not owned directly by the government, but is constantly monitored and heavily influenced by the government to ensure that its messaging aligns tightly with the “official” line.
+                        <br><br>
+                        <i>How does this align with Foucault?</i>
+                        <br>
+                        In the panopticon, the prisoners are stripped of their vision; they can’t see whether they are being watched, nor can they see the other prisoners. This creates a sense of isolation and ensures that the prisoners do not rise against the system. A similar stifling effect could be produced by restricting the freedom of speech and press. By shutting all criticisms of the state, the government ensures that dissenters do not find other like-minded individuals too easily.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade storymodal" id="modal2" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #3E5C76;'>
+                <div class="modal-header">
+                    <h5 class="modal-title">Response to COVID-19</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class='modalimage' src='assets/tracetogether.jpeg' onload='increment()'>
+                    <p>
+                        Following the outbreak of COVID-19, Singapore has been quick to implement technological measures to track the movements of its citizens. One must scan a QR Code to enter stores or malls around the island. More recently, each resident has been given a “Token”—essentially bluetooth beacon that tracks the movement of its holder and further strengthens Singapore’s contact tracing system. Each resident also has a digital profile, linked to their token, which allows them to check if they’ve come in contact with anyone with COVID, and also verifies that they have been vaccinated. While these measures have helped Singapore minimize the spread of COVID-19, many argue that it has encroached on the privacy of Singaporean citizens. 
+                        <br><br>
+                        <i>How does this align with Foucault?</i>
+                        <br>
+                        Describing the measures taken against the plague in the seventeenth century, Foucault notes that this model called for “multiple separations, individualizing distributions.” Discipline has become individualized; each subject is supervised and fixed into their own place. In Singapore, technology has given the government more power to individually monitor its citizens. Due to their individualized profile, the citizens are not simply one of the many indistinguishable faces in the crowd; at any given time, they can be identified, their movement can be tracked, and their past history can be revealed. This perhaps takes Foucault’s ideas to an even more extreme extent, creating a perfectly efficient model of discipline.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade storymodal" id="modal3" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #3E5C76;'>
+                <div class="modal-header">
+                    <h5 class="modal-title">Surveillance</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class='modalimage' src='assets/camera.jpeg' onload='increment()'>
+                    <p>
+                        Singapore has “an almost uncritical faith in technology,” says Adrian Kuah, a professor of public policy at National University of Singapore. In a tiny city-state dotted with over 90,000 CCTV cameras, Singaporeans operate under the assumption that their actions are being constantly watched. This figure is expected to rise to almost 30,000 cameras by the end of 2030 — a measure that Singapore claims is for the safety and security of its citizens. The vast network of CCTV cameras is collecting evidence that may be used against citizens for costly fines and even jail time, which include $2,000 or up to 3 months in jail for littering and up to $1,000 for jaywalking. Singapore is looking to implement more technology to reinforce their surveillance, such as patrol robots to monitor its citizens.
+                        <br><br>
+                        <i>How does this align with Foucault?</i>
+                        <br>
+                        A key component in Foucault’s idea of panopticon-like society is permanent visibility of the subjects. In the panopticon, the knowledge that they are constantly being watched is enough of a deterrent to keep the prisoners in line. Similarly, Singaporean citizens understand that no action goes unseen. This permanent visibility assures the automatic functioning of power, such that the citizens will continue to behave, even if there isn’t anyone checking the CCTV cameras.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade storymodal" id="modal4" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #3E5C76;'>
+                <div class="modal-header">
+                    <h5 class="modal-title">Suppression of Freedom of Assembly</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class='modalimage' src='assets/speaker.jpeg' onload='increment()'>
+                    <p>
+                        The right to peaceful assembly is extremely restricted in Singapore. The Public Order and Safety (Special Powers) Act 2018 further expands on the police’s powers, including to potentially deploy lethal forces against peaceful assemblies. The definition of “public assembly” is broad and can be made to encompass all sorts of peaceful political protests, including standing silently holding a placard. The only place where a public assembly could be legally held is in a place called the “Speaker’s Corner” in a small park. Even then, numerous restrictions are placed on what can be said and done. For example, an annual pride rally takes place at the Speaker’s Corner, but only under heavy police scrutiny and the additional stipulation that barricades be placed around the area.
+                        <br><br>
+                        <i>How does this align with Foucault?</i>
+                        <br>
+                        In the panopticon, the prisoners must not be able to see or communicate with one another, as this visibility may lead to dissenting voices brewing amongst them. Similarly, Singapore wants to limit public display of anti-government sentiment as much as possible. By ensuring that citizens mostly see positive coverage around the government, the state keeps its citizens “blind.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade storymodal" id="modal5" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #3E5C76;'>
+                <div class="modal-header">
+                    <h5 class="modal-title">Corporal Punishment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Corporal punishment in the form of caning is still fairly common in Singapore. Although its usage is beginning to wane, it is still widely accepted in many areas. In the judicial system, caning is used against male criminals under 50 years of age, and is considered to be the most severe form of caning. In milder forms, it is used against military servicemen who have committed serious offenses and also against schoolchildren. Lee Kuan Yew, former prime minister, explained that caning serves as a humiliating experience for the convict and thus a deterrent to crime.
+                        <br><br>
+                        <i>How does this align with Foucault?</i>
+                        <br>
+                        Foucault envisions the panopticon model as a shift away from punishment against the body to the soul. Singapore’s philosophy seems to diverge from Foucault’s ideas: caning is ostensibly a <i>corporal</i> punishment, which acts against the body. The punishment is the pain and scars the criminal receives due to caning. However, Lee Kuan Yew comments may suggest that there is a “soul” component to the punishment as well.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade timelinemodal" id="modal16" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #0D1321;'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style='width: 28%; min-width: 110px; margin-right: 10px; margin-top: 20px; float: left;' src='assets/timeline-1.png'>
+                    <div style='margin-top: 20px;'>
+                        <h1 class='text-center texth2 poppinsHeavy' style='margin-bottom: 20px;'>AUGUST 1965</h1>
+                        <h6 class='texth3 text-center poppinsLight'>
+                            Independence from Malaysia
+                        </h6>
+                        <h6 class='texth3 text-center spacing'>
+                            Following a 144-year British rule, Singapore became one of the 14 Malaysian states in 1963. However, economic, political, and racial disputes followed, with Singapore becoming increasingly discontent with Malaysia’s callous governance. Protests and race riots ensued until the tension culminated in Malaysia’s prime minister expelling Singapore in 1965.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade timelinemodal" id="modal17" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #0D1321;'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style='width: 40%; margin-left: 2%; min-width: 130px; margin-top: 20px; float: right;' src='assets/timeline-2.png'>
+                    <div id='december-text'>
+                        <h1 class='text-center texth2 poppinsHeavy'>APRIL 1968</h1>
+                        <h6 style='margin-bottom: 0.4em' class='texth3 text-center poppinsLight'>
+                            Singapore's General Election
+                        </h6>
+                        <h6 class='texth3 text-center spacing' style='margin-bottom: 0.2em'>
+                            In its first general election since gaining independence, the People’s Action Party (PAP) won all seats in the parliament, resulting in a monopoly. The PAP would maintain its tight grip on power to this day, where they maintain a super-majority in parliament. 
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade timelinemodal" id="modal18" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #0D1321;'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style='width: 30%; min-width: 100px; float: left;' src='assets/timeline-3.png'>
+                    <h1 class='text-center texth2 poppinsHeavy'>DECEMBER 1984</h1>
+                    <h6 class='texth3 text-center poppinsLight' style='margin-bottom: 0.4em'>
+                        The NCMP Scheme
+                    </h6>
+                    <h6 class='texth3 text-center spacing' style='margin-bottom: 0.2em'>
+                        The Non-constituency Member of Parliament scheme is introduced, which allows the best-performing members of opposition political parties to be elected onto the parliament despite not having won the election. In the following election, two members of opposition parties were elected onto the parliament, breaking the PAP’s monopoly.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade timelinemodal" id="modal19" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #0D1321;'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style='width: 40%; min-width: 140px; margin-left: 10px; float:right;' src='assets/timeline-4.png'>
+                    <div style='margin-top: 15px;'>
+                        <h1 class='text-center texth2 poppinsHeavy'>APRIL 2001</h1>
+                        <h6 class='texth3 poppinsLight' style='margin-bottom: 0.4em'>
+                            Anti-Government Sentiment
+                        </h6>
+                        <h6 class='texth3 spacing' style='margin-bottom: 0.2em'>
+                            An unprecedented anti-government rally attracts about 2000 people — the first of its kind ever since Singapore gained its independence. The protests showed support for popular opposition party politician Joshua "J.B.J." Jeyaretnam, who was facing ouster from the parliament.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade timelinemodal" id="modal20" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #0D1321;'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style='width: 40%; min-width: 140px; margin-left: 10px; float:right;' src='assets/timeline-5.png'>
+                    <h1 class='text-center texth2 poppinsHeavy'>AUGUST 2004</h1>
+                    <h6 class='texth3 poppinsLight' style='margin-bottom: 0.4em'>
+                        A New Prime Minister
+                    </h6>
+                    <h6 class='texth3 spacing' style='margin-bottom: 0.2em'>
+                        Lee Hsien Loong, eldest son of former prime minister Lee Kuan Yew (who served from 1954 to 1990), becomes the country’s third prime minister. The prime minister is appointed by the president, who in turn is elected by the people in a presidential election every six years.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade timelinemodal" id="modal21" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style='background-color: #0D1321;'>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style='width: 40%; margin-bottom: 24px; min-width: 120px; float:left;' src='assets/timeline-6.png'>
+                    <h1 class='text-center texth2 poppinsHeavy'>AUGUST 2016</h1>
+                    <h6 class='texth3 text-center poppinsLight' style='margin-bottom: 0.4em'>
+                        Contempt of Court Law
+                    </h6>
+                    <h6 class='texth3 text-center spacing' style='margin-bottom: 0.2em'>
+                        Parliament approves the Singapore’s Administration of Justice (Protection) Bill, which purports to protect the judicial system against the offense of scandalizing the court. This new bill causes controversy as it could see offenders jailed for merely criticizing the court, and is widely seen as Singapore further restricting freedom of speech.
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
